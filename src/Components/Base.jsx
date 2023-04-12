@@ -1,34 +1,37 @@
 import React, { useEffect, useState } from "react";
-import SideBar from "./SideBar";
+import SideBar from "../Components/SideBar";
 import { Outlet } from "react-router-dom";
-import TopNavBar from "./TopBar";
-import SearchBar from "./ADMIN/SearchBar";
-
+import TopNavBar from "../Components/TopBar";
+import Search_Bar from "./ADMIN/SearchBar";
 
 const Base = ({ Animate_visible, setAnimate_visible }) => {
-  const [boolean, setboolean] = useState();
+
   const [side_toggle, setside_toggle] = useState(false);
-  useEffect(() => {
-    const visible = JSON.parse(window.localStorage.getItem("dashboard"));
-    setboolean(visible);
-  }, []);
+
   return (
     <>
       {/*Page Wrapper*/}
       <div id="wrapper" className="sidebar-toggled">
-        <SideBar setAnimate_visible={setAnimate_visible} side_toggle={side_toggle} setside_toggle={setside_toggle} />
+        <SideBar
+          setAnimate_visible={setAnimate_visible}
+          side_toggle={side_toggle}
+          setside_toggle={setside_toggle}
+        />
         {/* ---------------------------*/}
         {/*Content Wrapper*/}
         <div id="content-wrapper" className="d-flex flex-column">
           {/*Main Content*/}
           <div id="content">
-            <TopNavBar  side_toggle={side_toggle} setside_toggle={setside_toggle} />
+            <TopNavBar
+              side_toggle={side_toggle}
+              setside_toggle={setside_toggle}
+            />
             {/* ---------------------------*/}
             {/*Begin Page Content*/}
             {/* start container-fluid*/}
             <div className="container-fluid bg-color">
               {/* outlet holds all the children components... */}
-              {Animate_visible ? <SearchBar /> : <Outlet></Outlet>}
+              {Animate_visible ? <Search_Bar /> : <Outlet></Outlet>}
             </div>
             {/*End container-fluid*/}
 
