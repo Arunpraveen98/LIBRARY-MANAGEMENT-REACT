@@ -4,7 +4,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import ApiData from "./ApiData";
 
-const Search_Bar = () => {
+const Searchbar = () => {
   // ----------------------------------------------------------------
   //? React hooks...
   const [SearchValue, setSearchValue] = useState("");
@@ -73,4 +73,4 @@ const Search_Bar = () => {
   );
 };
 
-export default Search_Bar;
+export default Searchbar;

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import SideBar from "../Components/SideBar";
 import { Outlet } from "react-router-dom";
 import TopNavBar from "../Components/TopBar";
-import Search_Bar from "./ADMIN/SearchBar";
+import Searchbar from "./ADMIN/SearchBar";
+
 
 
 const Base = ({ Animate_visible, setAnimate_visible }) => {
@@ -32,7 +33,7 @@ const Base = ({ Animate_visible, setAnimate_visible }) => {
             {/* start container-fluid*/}
             <div className="container-fluid bg-color">
               {/* outlet holds all the children components... */}
-              {Animate_visible ? <Search_Bar/> : <Outlet></Outlet>}
+              {Animate_visible ? <Searchbar/> : <Outlet></Outlet>}
             </div>
             {/*End container-fluid*/}
 
