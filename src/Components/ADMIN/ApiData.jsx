@@ -1,6 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "./ApiData.css";
 
 const ApiData = (LibraryBooksData) => {
@@ -52,15 +50,6 @@ const ApiData = (LibraryBooksData) => {
             </div>
           </div>
         </div>
-
-        {/* <div class="cover">
-          <img
-            className="card-image"
-            src={BookImageUrl}
-            alt={`Sorry, Image Not Found ${LibraryBooksData.LibraryBooksData.title}`}
-            // alt="https://cs.unissula.ac.id/wp-content/uploads/2018/07/no_image.jpg"
-          ></img>
-        </div> */}
       </div>
       {/* -------------------------------------------------------- */}
 

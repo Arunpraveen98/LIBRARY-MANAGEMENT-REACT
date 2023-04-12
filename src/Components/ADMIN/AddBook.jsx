@@ -101,7 +101,7 @@ const AddBook = () => {
           );
           success();
           setBtn_loading(true);
-          navigate("/dashboard/BooksList");
+          navigate("/dashboard/Admin-BooksList");
           // console.log(Create_Book_Data);
         } catch (error) {
           console.log(error);

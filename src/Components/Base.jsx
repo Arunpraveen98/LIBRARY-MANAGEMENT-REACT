@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SideBar from "../Components/SideBar";
 import { Outlet } from "react-router-dom";
 import TopNavBar from "../Components/TopBar";
 import Searchbar from "./ADMIN/SearchBar";
-
-
 
 const Base = ({ Animate_visible, setAnimate_visible }) => {
 
