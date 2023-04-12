@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import TopNavBar from "../Components/TopBar";
 import Search_Bar from "./ADMIN/SearchBar";
 
+
 const Base = ({ Animate_visible, setAnimate_visible }) => {
 
   const [side_toggle, setside_toggle] = useState(false);
@@ -31,7 +32,7 @@ const Base = ({ Animate_visible, setAnimate_visible }) => {
             {/* start container-fluid*/}
             <div className="container-fluid bg-color">
               {/* outlet holds all the children components... */}
-              {Animate_visible ? <Search_Bar /> : <Outlet></Outlet>}
+              {Animate_visible ? <Search_Bar/> : <Outlet></Outlet>}
             </div>
             {/*End container-fluid*/}
 
